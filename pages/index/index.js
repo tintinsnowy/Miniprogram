@@ -36,7 +36,7 @@ Page({
         }
       })
     }
-    //this.getList(this.data.currentType)
+    this.getList(this.data.currentType)
     //添加通知监听
     //wxNotificationCenter.addNotification("typesChangeNotification", this.typesChangeNotificationHandler, this)
   },
@@ -52,6 +52,14 @@ Page({
     dialog.loading()
     var that = this
     //请求数据
+    var list = [
+      {title: "1",
+        link :""
+      }
+    ]//set the data
+    that.setData({
+      contentList: list
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
