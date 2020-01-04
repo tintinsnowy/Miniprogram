@@ -51,12 +51,21 @@ Page({
   getList: function(type) {
     dialog.loading()
     var that = this
+    let fs = wx.getFileSystemManager(); // you need to call wx's own module, it is not Nodejs 模块
+    var files = fs.readdirSync('/images/nordic', 'utf8');
+    console.log(files)
+
     //请求数据
     var list = [
-      {title: "1",
-        link :""
+    ]
+    for(var i in files){
+      var item = {
+          title: files[i],
+          link : ""
       }
-    ]//set the data
+      list.push(item)
+    }
+    //set the data
     that.setData({
       contentList: list
     })
