@@ -38,7 +38,7 @@ Page({
     }
     this.getList(this.data.currentType)
     //添加通知监听
-    //wxNotificationCenter.addNotification("typesChangeNotification", this.typesChangeNotificationHandler, this)
+    wxNotificationCenter.addNotification("typesChangeNotification", this.typesChangeNotificationHandler, this)
   },
   //接收类别编辑页面中修改了类别标签的通知，重新处理
   typesChangeNotificationHandler: function() {
@@ -52,9 +52,8 @@ Page({
     dialog.loading()
     var that = this
     let fs = wx.getFileSystemManager(); // you need to call wx's own module, it is not Nodejs 模块
-    var files = fs.readdirSync('/images/nordic', 'utf8');
+    var files = fs.readdirSync('/images/'+type, 'utf8');
     console.log(files)
-
     //请求数据
     var list = [
     ]
@@ -77,5 +76,20 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  //点击某一个title条
+  changeType: function (e) {
+    var type = e.currentTarget.dataset.value
+    if (type == this.data.currentType) {
+      return;
+    }
+    this.setData({ currentType: type })
+    app.globalData.currentType = type
+    this.getList(type)
+  },
+  gotoDetails: function (e) {
+    let param = e.currentTarget.dataset, title = param.title, id = param.id
+    var url = "../details/album?title=" + title + "&id=" + id.replace(".", "##");
+    wx.navigateTo({ url: url })
+  },
 })
