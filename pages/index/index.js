@@ -88,8 +88,11 @@ Page({
     this.getList(type)
   },
   gotoDetails: function (e) {
-    let param = e.currentTarget.dataset, title = param.title, id = param.id
-    var url = "../details/album?title=" + title + "&id=" + id.replace(".", "##");
-    wx.navigateTo({ url: url })
+    let param = e.currentTarget.dataset, title = param.title, id = param.id;
+    var name = event.currentTarget.value;
+    var  url = '../details?id=' + name;
+    wx.navigateTo({
+      url: url
+    })
   },
 })
