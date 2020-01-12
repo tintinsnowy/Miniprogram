@@ -88,11 +88,12 @@ Page({
     this.getList(type)
   },
   gotoDetails: function (e) {
-    let param = e.currentTarget.dataset, title = param.title, id = param.id;
-    var name = event.currentTarget.value;
-    var  url = '../details?id=' + name;
+    //let param = e.currentTarget.dataset, title = param.title, id = param.id;
+    var name = e.currentTarget.value;
+    console.log(name)
+    var  url = '../details/details?id=' + name;
     wx.navigateTo({
       url: url
     })
-  },
+  }
 })

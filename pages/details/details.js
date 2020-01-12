@@ -94,20 +94,20 @@ Page({
     console.log('load photo detail');
     console.log(option.query)
     //加载第一个类型的列表
-    if (!this.data.currentType) {
-      let that = this
-      this.data.types.every(function (item) {
-        if (item.is_show) {
-          wx.setStorageSync('currentType', item.value)
-          that.setData({
-            currentType: item.value
-          })
-          return false
-        } else {
-          return true
-        }
-      })
-    }
+    // if (!this.data.currentType) {
+    //   let that = this
+    //   this.data.types.every(function (item) {
+    //     if (item.is_show) {
+    //       wx.setStorageSync('currentType', item.value)
+    //       that.setData({
+    //         currentType: item.value
+    //       })
+    //       return false
+    //     } else {
+    //       return true
+    //     }
+    //   })
+    // }
     this.getList(this.data.currentType)
     this.fetchDetail(options.id);
   }
