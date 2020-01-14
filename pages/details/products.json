@@ -1,0 +1,22 @@
+{
+  "products":[
+    "baroque",
+    "nordic"
+  ],
+  "baroque":[
+
+  ],
+  "nordic":[
+    { "name":"01北欧大气",
+      "price_1": 56,
+      "price_2":32,
+      "fabric": "麻"
+    },
+    {
+      "name": "02北欧小清新",
+      "price_1": 46,
+      "price_2": 22,
+      "fabric": "麻"
+    }
+  ]
+}

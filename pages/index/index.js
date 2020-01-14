@@ -88,10 +88,10 @@ Page({
     this.getList(type)
   },
   gotoDetails: function (e) {
-    //let param = e.currentTarget.dataset, title = param.title, id = param.id;
+    var type = this.data.currentType;
     var name = e.currentTarget.value;
-    console.log(name)
-    var  url = '../details/details?id=' + name;
+    console.log(type)
+    var  url = '../details/details?id=' + name+'&type='+type;
     wx.navigateTo({
       url: url
     })
