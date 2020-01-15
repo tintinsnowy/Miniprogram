@@ -27,7 +27,7 @@
   <!--beauty list content-->
   <view class="content">
     <block wx:for="{{contentList}}" wx:key="">
-      <view class="beauty_item" data-id="{{item.link}}" data-title="{{item.title}}" bindtap="gotoDetails">
+      <view class="beauty_item" data-id="{{item.link}}" data-title="{{item.title}}" bindtap="gotoDetails" >
         <!-- <image src="{{item.img}}" mode="aspectFill"></image> -->
         <image src="/images/nordic/{{item.title}}" mode="aspectFill"></image>
         <!-- <image src="/images/nordic/1.jpg" mode="aspectFill"></image>   -->

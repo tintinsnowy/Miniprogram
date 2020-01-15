@@ -33,9 +33,9 @@ Page({
     /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (e) {
+  onLoad: function (options) {
     console.log('load photo detail');
-    console.log(e.query)
+    console.log(options)
     //加载第一个类型的列表
     // if (!this.data.currentType) {
     //   let that = this

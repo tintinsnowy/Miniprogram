@@ -2,7 +2,7 @@
 <loading hidden="{{!loading}}">
     Loading
 </loading>
-
+<!-- 
 <modal class="modal" hidden="{{hideInfo}}" no-cancel bindconfirm="closeInfo">
     <view hidden="{{hideCamera}}"> <text>Camera: {{photo.camera}}</text> </view>
     <view hidden="{{hideLens}}"> <text>Lens: {{photo.lens}}</text> </view>
@@ -11,7 +11,7 @@
     <view hidden="{{hideRate}}"> <text>Rate: {{photo.rating}}</text> </view>
     <view hidden="{{hideVote}}"> <text>Vote: {{photo.votes_count}}</text> </view>
     <view hidden="{{hideView}}"> <text>View: {{photo.times_viewed}}</text> </view>
-</modal>
+</modal> -->
 
 <view class="container">
     <view class="topic-detail">

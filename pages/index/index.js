@@ -89,9 +89,8 @@ Page({
   },
   gotoDetails: function (e) {
     var type = this.data.currentType;
-    var name = e.currentTarget.value;
-    console.log(type)
-    var  url = '../details/details?id=' + name+'&type='+type;
+    var name = e.currentTarget.dataset.title;
+    var  url = '../details/details?id='+name+'&type='+type;
     wx.navigateTo({
       url: url
     })
